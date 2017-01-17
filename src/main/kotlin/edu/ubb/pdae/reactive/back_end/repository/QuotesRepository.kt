@@ -9,10 +9,10 @@ import edu.ubb.pdae.reactive.back_end.model.Quote
 class QuotesRepository private constructor() : Repository<Pair<String, List<Quote>>> {
 
     companion object {
-        private val instance by lazy { QuotesRepository() }
+        val instance by lazy { QuotesRepository() }
     }
 
-    private val quotes: Map<String, List<Quote>> = QuoteInput.load()
+    private val quotes: Map<String, MutableList<Quote>> = QuoteInput.load()
 
     override fun getAll(): List<Pair<String, List<Quote>>> = quotes.toList()
 

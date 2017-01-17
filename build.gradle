@@ -28,8 +28,11 @@ repositories {
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.springframework.boot:spring-boot-starter-web:$spring_boot_version"
-    compile 'com.github.kittinunf.fuel:fuel:1.3.1'
-    compile 'com.google.code.gson:gson:2.8.0'
-    
+
+    compile 'com.github.kittinunf.fuel:fuel-rxjava:1.3.1'  // Networking library
+    compile 'com.github.kittinunf.fuel:fuel:1.3.1'  // Networking library
+
+    compile 'com.google.code.gson:gson:2.8.0'   // Json parsing
+    compile "io.reactivex.rxjava2:rxjava:2.0.4" // reactive streams
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }

@@ -8,17 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
  */
 @SpringBootApplication
 open class App {
-
-    var state: ApplicationState
-
-    init {
-        state = ApplicationState.Loading()
-    }
-
+    var state: ApplicationState = ApplicationState.Loading()
 }
 
 fun main(args: Array<String>) {
-    println("34567890")
-    println(QuotesRepository.instance.getAll())
-    println("34567890")
+    QuotesRepository.instance.getAll()
 }
